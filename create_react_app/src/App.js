@@ -11,7 +11,7 @@ function App() {
 
   const [count, setCount] = useState(10);
 
-  const [array, setArray] = useState([1, 2])
+  const [array, setArray] = useState([1, 2, {}])
   const mapper = {
     A: setTextA,
     B: setTextB,
@@ -27,9 +27,9 @@ function App() {
         </p>
         <button onClick={() => {
           const newArray = array.slice()
-          // newArray[0].filters = [{c:'1'}]
-          newArray.push('3')
-          setArray(newArray)
+          newArray[2].filters = [{c:'1'}]
+          // newArray.push('3')
+          // setArray(newArray)
         }}>change array</button>
 
         <button

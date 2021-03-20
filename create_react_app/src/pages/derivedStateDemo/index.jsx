@@ -5,12 +5,18 @@ class DerivedStateDemo extends Component {
     console.log('prevProps', prevProps)
     console.log('this.props', this.props)
   }
-
+  changeState = ()=> {
+    this.setState({
+      myLocalText: 'hello'
+    })
+  }
   render() {
     return (
       <div>
         {JSON.stringify(this.props.array)}
         {this.props.text}
+
+        <button onClick={this.changeState}>change state</button>
       </div>
     );
   }

@@ -4,6 +4,7 @@ import "./App.css";
 import A from "./pages/A";
 import B from "./pages/B";
 import DerivedStateDemo from "./pages/derivedStateDemo";
+import ListItemPlayground from "./pages/listItemPlayground"
 
 function App() {
   const [textA, setTextA] = useState("我是A的文本");
@@ -25,14 +26,14 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <button onClick={() => {
+        {/* <button onClick={() => {
           const newArray = array.slice()
           newArray[2].filters = [{c:'1'}]
           // newArray.push('3')
           // setArray(newArray)
-        }}>change array</button>
+        }}>change array</button> */}
 
-        <button
+        {/* <button
           onClick={() => {
             onClick("A");
           }}
@@ -52,12 +53,15 @@ function App() {
           }}
         >
           change B count
-        </button>
+        </button> */}
 
-        <A text={textA} />
-        <B text={textB} count={count} />
-        <DerivedStateDemo array={array} text={textA} />
+        {/* <A text={textA} />
+        <B text={textB} count={count} /> */}
+        {/* <DerivedStateDemo array={array} text={textA} /> */}
       </header>
+
+
+      <ListItemPlayground />
     </div>
   );
 }

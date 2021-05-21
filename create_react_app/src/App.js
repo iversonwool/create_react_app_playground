@@ -6,6 +6,8 @@ import B from "./pages/B";
 import DerivedStateDemo from "./pages/derivedStateDemo";
 import ListItemPlayground from "./pages/listItemPlayground"
 
+import ReactTransitionGroup from './pages/ReactTransitionGroup'
+
 function App() {
   const [textA, setTextA] = useState("我是A的文本");
   const [textB, setTextB] = useState("我是B的文本");
@@ -20,6 +22,9 @@ function App() {
   const onClick = (e) => {
     mapper[e](`${e}文本被修改了`);
   };
+
+  const [fade, setFade] = useState(true)
+
   return (
     <div className="App">
       <header className="App-header">
@@ -61,7 +66,16 @@ function App() {
       </header>
 
 
-      <ListItemPlayground />
+      {/* <ListItemPlayground /> */}
+
+      <button
+          onClick={() => {
+            setFade(!fade)
+          }}
+        >
+          transition
+        </button>
+      <ReactTransitionGroup in={fade} />
     </div>
   );
 }

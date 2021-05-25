@@ -11,6 +11,8 @@ import ListItemPlayground from "./pages/listItemPlayground"
 
 import ReactTransitionGroup from './pages/ReactTransitionGroup'
 
+import ReactSpringDemo from './pages/ReactSpring'
+
 function App() {
   const [textA, setTextA] = useState("我是A的文本");
   const [textB, setTextB] = useState("我是B的文本");
@@ -71,13 +73,13 @@ function App() {
 
       {/* <ListItemPlayground /> */}
 
-      <button
+      {/* <button
           onClick={() => {
             setFade(!fade)
           }}
         >
           transition
-        </button>
+        </button> */}
 
 {/* 
         <Transition in={fade} timeout={500}>
@@ -87,6 +89,9 @@ function App() {
           }}
         </Transition> */}
       {/* <ReactTransitionGroup in={fade} /> */}
+
+
+      <ReactSpringDemo />
     </div>
   );
 }

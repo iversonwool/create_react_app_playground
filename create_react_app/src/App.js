@@ -1,5 +1,8 @@
 import { useState } from "react";
 import logo from "./logo.svg";
+
+// import {Transition} from 'react-transition-group'
+
 import "./App.css";
 import A from "./pages/A";
 import B from "./pages/B";
@@ -23,7 +26,7 @@ function App() {
     mapper[e](`${e}文本被修改了`);
   };
 
-  const [fade, setFade] = useState(true)
+  const [fade, setFade] = useState(false)
 
   return (
     <div className="App">
@@ -75,7 +78,15 @@ function App() {
         >
           transition
         </button>
-      <ReactTransitionGroup in={fade} />
+
+{/* 
+        <Transition in={fade} timeout={500}>
+          {state => {
+            console.log('state', state)
+            return <div>{'eeee'}</div>
+          }}
+        </Transition> */}
+      {/* <ReactTransitionGroup in={fade} /> */}
     </div>
   );
 }

@@ -19,14 +19,17 @@ const transitionStyles = {
 
 const Fade = ({ in: inProp }) => (
   <Transition in={inProp} timeout={duration}>
-    {state => (
-      <div style={{
-        ...defaultStyle,
-        ...transitionStyles[state]
-      }}>
-        I'm a fade Transition!
-      </div>
-    )}
+    {state => {
+      console.log('state', state)
+      return (
+        <div style={{
+          ...defaultStyle,
+          ...transitionStyles[state]
+        }}>
+          I'm a fade Transition!
+        </div>
+      )
+    }}
   </Transition>
 );
 

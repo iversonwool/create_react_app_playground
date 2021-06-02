@@ -1,0 +1,15 @@
+.animation_demo {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  animation: myrotate 2s linear infinite;
+}
+
+@keyframes myrotate {
+  0% {
+    width: 100px;
+  }
+  100% {
+    width: 200px;
+  }
+}

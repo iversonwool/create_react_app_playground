@@ -11,6 +11,8 @@ import ListItemPlayground from "./pages/listItemPlayground"
 
 import ReactTransitionGroup from './pages/ReactTransitionGroup'
 
+import Animation from './pages/animations/animation'
+
 import ReactSpringDemo from './pages/ReactSpring'
 
 function App() {
@@ -92,6 +94,8 @@ function App() {
 
 
       <ReactSpringDemo />
+
+      <Animation />
     </div>
   );
 }

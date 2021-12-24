@@ -15,6 +15,9 @@ import Animation from './pages/animations/animation'
 
 import ReactSpringDemo from './pages/ReactSpring'
 
+
+import {saveAs} from 'file-saver'
+
 function App() {
   const [textA, setTextA] = useState("我是A的文本");
   const [textB, setTextB] = useState("我是B的文本");
@@ -96,6 +99,10 @@ function App() {
       <ReactSpringDemo />
 
       <Animation />
+
+      <button onClick={() => {
+        saveAs('https://lucdfilekf.szlanyou.com/lucd/202112/1844cbf3967b8691af0a57cd90c1a0bflucd.svg')
+      }}>download svg</button>
     </div>
   );
 }

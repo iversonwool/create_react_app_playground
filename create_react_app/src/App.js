@@ -14,7 +14,7 @@ import ReactTransitionGroup from './pages/ReactTransitionGroup'
 import Animation from './pages/animations/animation'
 
 import ReactSpringDemo from './pages/ReactSpring'
-
+import CloneFunc from './pages/cloneFunc'
 
 import {saveAs} from 'file-saver'
 
@@ -37,10 +37,10 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
+      {/* <header className="App-header"> */}
+        {/* <p>
           Edit <code>src/App.js</code> and save to reload.
-        </p>
+        </p> */}
         {/* <button onClick={() => {
           const newArray = array.slice()
           newArray[2].filters = [{c:'1'}]
@@ -73,7 +73,7 @@ function App() {
         {/* <A text={textA} />
         <B text={textB} count={count} /> */}
         {/* <DerivedStateDemo array={array} text={textA} /> */}
-      </header>
+      {/* </header> */}
 
 
       {/* <ListItemPlayground /> */}
@@ -96,13 +96,19 @@ function App() {
       {/* <ReactTransitionGroup in={fade} /> */}
 
 
-      <ReactSpringDemo />
+      {/* <ReactSpringDemo /> */}
 
-      <Animation />
+      {/* <Animation /> */}
 
-      <button onClick={() => {
+      {/* <button onClick={() => {
         saveAs('https://lucdfilekf.szlanyou.com/lucd/202112/1844cbf3967b8691af0a57cd90c1a0bflucd.svg')
-      }}>download svg</button>
+      }}>download svg</button> */}
+
+
+
+      <CloneFunc>
+        <Animation />
+      </CloneFunc>
     </div>
   );
 }

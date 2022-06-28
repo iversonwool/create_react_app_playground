@@ -108,6 +108,7 @@ function App() {
 
       <CloneFunc>
         <Animation />
+        <div>我是一个div</div>
       </CloneFunc>
     </div>
   );

@@ -7,6 +7,7 @@ function CloneChildren(props) {
 
 
   return React.Children.map(children, function(child) {
+    console.log(child);
     return React.cloneElement(child, {highlight: true})
   })
 }

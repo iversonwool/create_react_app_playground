@@ -11,7 +11,7 @@ import ListItemPlayground from "./pages/listItemPlayground"
 
 import ReactTransitionGroup from './pages/ReactTransitionGroup'
 
-import Animation from './pages/animations/animation'
+import Animation, {Another} from './pages/animations/animation'
 
 import ReactSpringDemo from './pages/ReactSpring'
 import CloneFunc from './pages/cloneFunc'
@@ -108,8 +108,15 @@ function App() {
 
       <CloneFunc>
         <Animation />
-        <div>我是一个div</div>
+
+
       </CloneFunc>
+      {!fade && <Another style={{display: fade ? 'none' : 'block'}} />}
+
+
+      <button onClick={() => {
+        setFade(true)
+      }}>Fade</button>
     </div>
   );
 }
